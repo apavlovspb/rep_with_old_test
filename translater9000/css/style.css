@@ -70,12 +70,20 @@ h3 {
   box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
 }
 
+.header-navbar_new:hover {
+  background-image: linear-gradient(rgb(240, 243, 34), rgb(166, 237, 100));
+}
+
 .header-navbar_current {
   width: 400px;
   height: 100px;
   border-radius: 30px;
   background-image: linear-gradient(rgba(205, 100, 237, 0.753), rgb(243, 34, 163));
   box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
+}
+
+.header-navbar_current:hover {
+  background-image: linear-gradient(rgb(243, 34, 163), rgba(205, 100, 237, 0.753));
 }
 
 .main-block {
@@ -134,7 +142,11 @@ h3 {
   border-radius: 30px;
   background-image: linear-gradient(cornflowerblue, rgb(34, 107, 243));
   box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
-  c
+}
+
+.main-block_btn:hover,
+.add__new_btn:hover {
+  background-image: linear-gradient(rgb(34, 107, 243), cornflowerblue);
 }
 
 .main-block_result {
@@ -238,15 +250,35 @@ h3 {
 }
 
 .temp-li {
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   height: 20px;
   font-size: 1.5rem;
-  border-bottom: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.473));
+
+}
+
+.temp-li>p {
+  text-align: right;
+}
+
+.temp-li>button {
+  border: none;
+  text-decoration: none;
+  background-image: linear-gradient(rgb(237, 100, 100), rgb(243, 34, 34));
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+}
+
+.temp-li>button:hover {
+  background-image: linear-gradient(rgb(243, 34, 34), rgb(237, 100, 100));
 }
 
 .div__new_closebtn {
   position: relative;
+
 }
 
 .li__new_closebtn {
@@ -256,4 +288,5 @@ h3 {
   width: 50px;
   border-radius: 25px;
   align-items: center;
+
 }
