@@ -90,7 +90,7 @@ const showMeAllItem = (arr, position) => {
   divForAll.classList.add('temp_ul');
   showMyArr.classList.add('main-ul');
   if (!arr.length) {
-    showMyArr.innerHTML = 'add new item';
+    showMyArr.innerHTML = `<h1 style='text-align:center'>add new item</h1>`;
     position.appendChild(divForAll);
     return;
   }
