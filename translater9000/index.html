@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>translate9000</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./script/index.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700&family=Poppins:wght@500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header-navbar">
+        <h1 class="header-navbar_title">Транслетер</h1>
+        <div class="header-navbar_buttons">
+          <button class="btn header-navbar_new">Добавить новое слово</button>
+          <button class="btn header-navbar_current">Текущий список слов</button>
+        </div>
+      </div>
+      <div class="main-block">
+        <div class="main-block_game">
+          <p class="main-block_questions">Нужно добавить первое слово</p>
+          <div class="main-block_answer">
+            <input class="main-block_input" type="text" />
+            <button class="btn main-block_btn">Ответить</button>
+          </div>
+        </div>
+        <div class="main-block_result">
+          <p class="main-block_text">sometext</p>
+        </div>
+      </div>
+      <div class="add__new modal hidden">
+        <div class="add__new-modal">
+          <div class="add__new-modal-content">
+            <div class="new_closebtn">
+              <button class="btn add__new_closebtn">X</button>
+            </div>
+            <input type="text" class="add__new-eng" />
+            <input type="text" class="add__new-ru" />
+            <button class="btn add__new_btn">submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="current__item-list modal hidden"></div>
+    </div>
+    <script src="./script/script.js"></script>
+    <!-- <div class="temp_ul">
+      <ul class="main-ul">
+        <li class="temp-li">
+          <p class="li_number">1</p>
+          <p class="li_title">text 11</p>
+          <p class="li_text">text 12</p>
+          <button class="btn-ul">delete</button>
+        </li>
+        <li class="temp-li">
+          <p class="li_number">2</p>
+          <p class="li_title">text 21</p>
+          <p class="li_text">text 22</p>
+          <button class="btn-ul">delete</button>
+        </li>
+        <li class="temp-li">
+          <p class="li_number">3</p>
+          <p class="li_title">text 31</p>
+          <p class="li_text">text 32</p>
+          <button class="btn-ul">delete</button>
+        </li>
+      </ul>
+    </div> -->
+  </body>
+</html>

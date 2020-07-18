@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Nunito Sans', sans-serif;
+  color: rgba(17, 45, 88, 0.6);
+  font-size: 2.1rem;
+  /* background */
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #112d58;
+  font-size: 4.55rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  border: none;
+  text-decoration: none;
+  height: 42px;
+  border-radius: 40px;
+  padding: 0 2rem;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  cursor: pointer;
+  outline: none;
+  color: rgba(17, 45, 88, 0.6);
+}
+
+.wrapper {
+  margin: 2rem auto 0;
+  width: 1400px;
+  height: 850px;
+  border-radius: 30px;
+  box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
+  background-color: #ffffff;
+}
+
+.header-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 5rem 0;
+  align-items: center;
+}
+
+.header-navbar_new {
+  width: 400px;
+  height: 100px;
+  border-radius: 30px;
+  background-image: linear-gradient(rgb(166, 237, 100), rgb(240, 243, 34));
+  box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
+}
+
+.header-navbar_current {
+  width: 400px;
+  height: 100px;
+  border-radius: 30px;
+  background-image: linear-gradient(rgba(205, 100, 237, 0.753), rgb(243, 34, 163));
+  box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
+}
+
+.main-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 5rem 0;
+  /* align-items: center; */
+}
+
+.main-block_game,
+.main-block_result {
+  width: 600px;
+  height: 600px;
+  border-radius: 30px;
+  box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
+}
+
+.main-block_questions {
+  margin: 5rem auto 0;
+  width: 500px;
+  height: 100px;
+  border-radius: 30px;
+  font-size: 3rem;
+  box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.main-block_answer {
+  margin: 2rem auto 0;
+  width: 500px;
+  height: 300px;
+  border-radius: 30px;
+  box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-block_input {
+  display: inline-block;
+  width: 400px;
+  height: 100px;
+  font-size: 3rem;
+  margin: 2rem auto 0;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  color: rgba(17, 45, 88, 0.6);
+}
+
+.main-block_btn,
+.add__new_btn {
+  margin: 2rem auto 0;
+  width: 400px;
+  height: 100px;
+  border-radius: 30px;
+  background-image: linear-gradient(cornflowerblue, rgb(34, 107, 243));
+  box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
+  c
+}
+
+.main-block_result {
+  text-align: center;
+
+}
+
+.main-block_text {
+  margin: 5rem auto 0;
+  height: 420px;
+  width: 500px;
+  border-radius: 30px;
+  box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
+  text-align: center;
+  font-size: 10rem;
+  padding: 20% 0;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, .5)
+}
+
+.add__new-modal {
+  margin: 18rem auto;
+  border-radius: 30px;
+  height: 510px;
+  width: 600px;
+  box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
+  background: #ffffff;
+}
+
+.add__new-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+
+
+.add__new-eng,
+.add__new-ru {
+  margin: 5rem auto 0;
+  width: 500px;
+  height: 100px;
+  border-radius: 30px;
+  font-size: 3rem;
+  box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
+  text-align: center;
+  padding: 2.5rem;
+  outline: none;
+  border: none;
+  color: rgba(17, 45, 88, 0.6);
+}
+
+.new_closebtn {
+  position: relative;
+}
+
+.add__new_closebtn {
+  position: absolute;
+  right: 2%;
+  background-color: transparent;
+  width: 50px;
+  border-radius: 25px;
+  align-items: center;
+}
+
+.add__new_btn {
+  width: 500px;
+  margin-top: 5rem;
+}
+
+
+
+/* __________________________ */
+
+.temp_ul {
+  margin: 18rem auto;
+  border-radius: 30px;
+  background-color: #fff;
+  width: 600px;
+  height: 600px;
+  overflow: auto;
+}
+
+.main-ul {
+  padding: 5rem 0;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.temp-li {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  font-size: 1.5rem;
+  border-bottom: #fff;
+}
+
+.div__new_closebtn {
+  position: relative;
+}
+
+.li__new_closebtn {
+  position: absolute;
+  right: 2%;
+  background-color: transparent;
+  width: 50px;
+  border-radius: 25px;
+  align-items: center;
+}
