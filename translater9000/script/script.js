@@ -67,13 +67,16 @@ const addNewItem = (arr) => {
   document.querySelector('.add__new-ru').value = '';
   arr.push(tempItem);
   setLocalValue(arr);
-  console.log(arr);
+  drawRandomChar(lang, arr);
+  console.log(lang, arr);
 };
 
 // Текущий список слов
 const itemList = document.querySelector('.current__item-list');
 const showMeAllItem = (arr, position) => {
+  // if (itemList.classList.contains('hidden')) {
   itemList.classList.toggle('hidden');
+  //  }
   //document.body.style.overflow = 'hidden';
   position.innerHTML = '';
   const showMyArr = document.createElement('ul');
@@ -109,10 +112,14 @@ const showMeAllItem = (arr, position) => {
 };
 
 itemList.addEventListener('click', (e) => {
-  if (e.target === itemList) {
+  if (
+    e.target === itemList ||
+    e.target.classList.contains('li__new_closebtn')
+  ) {
     itemList.classList.toggle('hidden');
     // document.body.style.overflow = '';
   }
+  console.log(e.target.classList.contains('li__new_closebtn'));
 });
 
 // document.querySelector('.header-navbar_new').addEventListener('click', () => {
@@ -131,14 +138,19 @@ document
 
 itemList.addEventListener('click', (e) => {
   console.log(e.target.tagName);
-  if (e.target.tagName !== 'BUTTON') {
+  if (
+    e.target.tagName !== 'BUTTON' ||
+    e.target.classList.contains('li__new_closebtn')
+  ) {
     return;
   }
+  console.log(e.target.classList.contains('li__new_closebtn'));
   const p = e.target.parentElement.firstChild.innerText;
   console.log(+p);
   currentListItem.splice(p - 1, 1);
   showMeAllItem(currentListItem, itemList);
   setLocalValue(currentListItem);
+  drawRandomChar(lang, currentListItem);
 });
 
 document
