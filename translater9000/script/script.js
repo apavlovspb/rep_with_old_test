@@ -42,7 +42,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const takeInput = () => {
     const inputChar = document.querySelector('.main-block_input');
     const input = inputChar.value.toLowerCase();
-    if (inputChar.value === '') {
+    const reg = /\d/;
+    if (inputChar.value === '' || reg.test(inputChar.value)) {
       incorrrectValue('.main-block_game');
       return '';
     }
@@ -88,7 +89,13 @@ window.addEventListener('DOMContentLoaded', () => {
       .querySelector('.add__new-eng')
       .value.toLowerCase();
     const ruValue = document.querySelector('.add__new-ru').value.toLowerCase();
-    if (ruValue === '' || engValue === '') {
+    const reg = /\d/;
+    if (
+      ruValue === '' ||
+      engValue === '' ||
+      reg.test(engValue) ||
+      reg.test(ruValue)
+    ) {
       incorrrectValue('.add__new-modal');
       return;
     }
