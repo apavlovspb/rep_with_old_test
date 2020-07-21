@@ -6,6 +6,17 @@
 //   bible: 'библия',
 // };
 
+function incorrrectValue(position) {
+  const positionInput = document.querySelector(position);
+  const errorElement = document.createElement('div');
+  positionInput.appendChild(errorElement);
+  errorElement.innerHTML = `<p  style='display:block; position:absolute; left:35%;'>this incorrect value</p>`;
+  errorElement.style = 'position:relative';
+  setTimeout(() => {
+    errorElement.remove();
+  }, 1500);
+}
+
 let currentListItem = localStorage.getItem('value') ? getLocalValue() : [];
 
 let lang = 0;
@@ -29,7 +40,11 @@ const getRandomChar = (lang, arr) => {
 //сбор инпута от пользователя
 const takeInput = () => {
   const inputChar = document.querySelector('.main-block_input');
-  const input = inputChar.value;
+  const input = inputChar.value.toLowerCase();
+  if (inputChar.value === '') {
+    incorrrectValue('.main-block_game');
+    return '';
+  }
   inputChar.value = '';
   console.log(input);
   return input;
@@ -41,7 +56,13 @@ const compareResult = (lang, arr) => {
     document.querySelector('.main-block_text').innerHTML = 'add new item';
   }
   console.log(arr[currentNumber][1]);
-  if (takeInput() == arr[currentNumber][1]) {
+  const input = takeInput();
+  if (input === '') {
+    drawResult('error');
+    return;
+  }
+
+  if (input == arr[currentNumber][1]) {
     drawResult(1);
   } else {
     drawResult(0);
@@ -51,18 +72,24 @@ const compareResult = (lang, arr) => {
 // отрисовка результата победы
 const drawResult = (arg) => {
   let result = '';
-  if (arg) {
+  if (arg === 1) {
     result = 'win';
-  } else {
+  } else if (arg === 0) {
     result = 'lose';
+  } else if (arg === 'error') {
+    result = 'incorrect value';
   }
   document.querySelector('.main-block_text').innerHTML = result;
 };
 // добавление нового элемента с список
 const addNewItem = (arr) => {
-  const endValue = document.querySelector('.add__new-eng').value;
-  const ruValue = document.querySelector('.add__new-ru').value;
-  const tempItem = [endValue, ruValue];
+  const engValue = document.querySelector('.add__new-eng').value.toLowerCase();
+  const ruValue = document.querySelector('.add__new-ru').value.toLowerCase();
+  if (ruValue === '' || engValue === '') {
+    incorrrectValue('.add__new-modal');
+    return;
+  }
+  const tempItem = [engValue, ruValue];
   document.querySelector('.add__new-eng').value = '';
   document.querySelector('.add__new-ru').value = '';
   arr.push(tempItem);
