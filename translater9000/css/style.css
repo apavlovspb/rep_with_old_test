@@ -63,27 +63,32 @@ h3 {
 }
 
 .header-navbar_new {
-  width: 400px;
+  width: 300px;
   height: 100px;
   border-radius: 30px;
-  background-image: linear-gradient(rgb(166, 237, 100), rgb(240, 243, 34));
+  background-color: #ffffff;
   box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
+
 }
 
+
+
 .header-navbar_new:hover {
-  background-image: linear-gradient(rgb(240, 243, 34), rgb(166, 237, 100));
+  box-shadow: 0 0 10px rgba(0, 17, 255, 0.781);
+  /* background-image: linear-gradient(to top, darkorchid, fuchsia); */
 }
 
 .header-navbar_current {
-  width: 400px;
+  width: 300px;
   height: 100px;
   border-radius: 30px;
-  background-image: linear-gradient(rgba(205, 100, 237, 0.753), rgb(243, 34, 163));
+  background-color: #ffffff;
   box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
 }
 
 .header-navbar_current:hover {
-  background-image: linear-gradient(rgb(243, 34, 163), rgba(205, 100, 237, 0.753));
+  box-shadow: 0 0 10px rgba(0, 17, 255, 0.781);
+  /* background-image: linear-gradient(to top, darkorchid, fuchsia); */
 }
 
 .main-block {
@@ -140,13 +145,13 @@ h3 {
   width: 400px;
   height: 100px;
   border-radius: 30px;
-  background-image: linear-gradient(cornflowerblue, rgb(34, 107, 243));
+  background-image: linear-gradient(rgba(100, 148, 237, 0.5), rgba(34, 107, 243, 0.5));
   box-shadow: 0px 20px 98.6px 7.4px rgba(33, 138, 218, 0.12);
 }
 
 .main-block_btn:hover,
 .add__new_btn:hover {
-  background-image: linear-gradient(rgb(34, 107, 243), cornflowerblue);
+  background-image: linear-gradient(rgba(34, 107, 243, 0.555), rgba(100, 148, 237, 0.555));
 }
 
 .main-block_result {

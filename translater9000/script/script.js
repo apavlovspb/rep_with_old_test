@@ -74,9 +74,9 @@ const addNewItem = (arr) => {
 // Текущий список слов
 const itemList = document.querySelector('.current__item-list');
 const showMeAllItem = (arr, position) => {
-  // if (itemList.classList.contains('hidden')) {
-  itemList.classList.toggle('hidden');
-  //  }
+  if (itemList.classList.contains('hidden')) {
+    itemList.classList.toggle('hidden');
+  }
   //document.body.style.overflow = 'hidden';
   position.innerHTML = '';
   const showMyArr = document.createElement('ul');
