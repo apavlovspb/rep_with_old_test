@@ -103,9 +103,9 @@ function dragDrop(e) {
   startItem.classList.add('hide');
   if (e.target.firstElementChild.tagName == 'P') {
     startItem.classList.remove('hide');
-    console.log(startItem);
+    //console.log(startItem);
     e.target.classList.remove('ul-element-dragenter');
-    console.log(e.target);
+   // console.log(e.target);
     return;
   }
   startItem.remove();
@@ -118,7 +118,7 @@ function dragDrop(e) {
     currentItem.tagName == 'OL'
   ) {
     inputPosition = `${e.target.dataset.myValueSet}${separator}-1`;
-    console.log('g');
+    //console.log('g');
   }
   currentItem.dataset.myValueSet = dynamicDrag(inputPosition, position);
 
@@ -131,7 +131,7 @@ function dragDrop(e) {
 
 //dynamic DnD. change dataset
 function dynamicDrag(newPos, oldPos) {
-  console.log(inputPosition);
+  //console.log(inputPosition);
   let arrNewPos = newPos.split(`${separator}`);
   let nan = arrNewPos[arrNewPos.length - 1];
   if (isNaN(nan)) {
@@ -149,7 +149,7 @@ function dynamicDrag(newPos, oldPos) {
 function createObject(parent) {
   const obj = deepCreateObject(parent);
 
-  console.log(obj);
+//  console.log(obj);
   return obj;
 }
 
