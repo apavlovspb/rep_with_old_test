@@ -104,6 +104,7 @@ function dragDrop(e) {
     console.log(e.target);
     return;
   }
+  startItem.remove();
   changeSiblig(startItem, startItem.dataset.myValueSet);
   e.target.classList.remove('ul-element-dragenter');
   e.target.append(currentItem);
