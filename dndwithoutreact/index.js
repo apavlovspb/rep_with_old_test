@@ -5,6 +5,10 @@ const textArea = document.querySelector('.textare-input');
 const textAreaButton = document.querySelector('.textarea-button');
 
 textAreaButton.addEventListener('click', () => {
+  if (!isValidJSONString(textArea.value)) {
+    console.log('its not JSON');
+    return;
+  }
   let myTransform = JSON.parse(textArea.value);
   drawSomeThing(myTransform);
   moveAll();
@@ -187,4 +191,14 @@ function deepCreateObject(inObject) {
   });
 
   return outObject;
+}
+
+//jsonValid
+function isValidJSONString(str) {
+  try {
+    JSON.parse(str);
+  } catch (e) {
+    return false;
+  }
+  return true;
 }
