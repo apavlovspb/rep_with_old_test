@@ -79,9 +79,6 @@ function dragStart(e) {
 }
 function dragEnd(e) {
   this.classList.remove('ul-element-draggable');
-  //changeSiblig(e.target, e.target.dataset.myValueSet);
-  //e.target.classList.add('hide');
-  //e.target.remove();
 }
 
 function dragEnter(e) {
