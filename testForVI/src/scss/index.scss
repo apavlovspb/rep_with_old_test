@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import '~normalize.css';
+@import "variables";
+@import "mixins";
+@import 'spinner.scss';
+@import "header";
+@import "table";
+@import "navbar";
+@import "details";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin: 0 auto;
+    width: 1360px;
+}
+
+.flextable {
+    position: relative;
+    color: grey;
+}
+
+.material-icons {
+    font-size: 18px;
+}
+
+.delete {
+    display: none;
+}

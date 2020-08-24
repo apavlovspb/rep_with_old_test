@@ -1,0 +1,10 @@
+export const dataLoading = 'data_loading';
+export const dataLoaded = 'data_loaded';
+export const arrayOpened = 'array_opened';
+export const arrayFinished = 'array_finish_opened';
+export const searchPanelStart = 'searchpanel';
+export const searchPanelUpdate = 'searchpanelupdate';
+export const downloadNewPage = 'download new page';
+export const changeTarget = 'change target';
+export const serverError = 'server error';
+export const newSort = 'new sort activate';

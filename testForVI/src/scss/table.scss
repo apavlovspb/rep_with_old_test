@@ -1,0 +1,55 @@
+@import "variables";
+@import "mixins";
+
+.flextable__table {
+    position: relative;
+
+    .row {
+
+        min-height: 20px;
+        height: 100%;
+
+        & .selected {
+            background-color: rgba(0, 153, 255, 0.315);
+        }
+
+        &:last-child {
+            border-bottom: 1px dashed rgb(122, 121, 121);
+        }
+
+    }
+
+    .row-data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-size: 18px;
+        border-left: 1px dashed rgb(122, 121, 121);
+        cursor: pointer;
+
+    }
+
+    .column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $cell-width;
+        border-top: 1px dashed rgb(122, 121, 121);
+        background-color: rgb(226, 226, 226);
+        border-right: 1px dashed rgb(122, 121, 121);
+
+    }
+
+    .cell {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $cell-width;
+        border-top: 1px dashed rgb(122, 121, 121);
+        border-right: 1px dashed rgb(122, 121, 121);
+        background-color: rgba(255, 255, 255, 0.185);
+        font-size: 14px;
+        min-height: 20px;
+    }
+}

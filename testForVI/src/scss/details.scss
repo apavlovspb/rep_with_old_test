@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixins";
+
+.flextable__details {
+    margin-top: 50px;
+    width: 50%;
+
+    & div {
+        padding: 10px;
+        border: 1px solid rgba(0, 153, 255, 0.315);
+        margin-top: 5px;
+
+        & div {
+            padding: 0px;
+            border: none
+        }
+    }
+
+}
