@@ -39,7 +39,7 @@ export class DataCenter {
     this.currentPage = 1;
   }
   changeSearchValue(value) {
-    this.searchValue = value;
+    this.searchValue = value.trim();
   }
 
   changeData(arr) {
