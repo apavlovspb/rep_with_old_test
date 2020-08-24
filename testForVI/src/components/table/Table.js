@@ -1,4 +1,5 @@
 import { FlexTableComponent } from '../../core/FlexTableComponent';
+import { __sortZA, __sortAZ } from '../../core/Data';
 // import { createTable } from './table.template';
 import { createTable } from './table.template';
 import { TableSelection } from './TableSelection';
@@ -68,9 +69,9 @@ export class Table extends FlexTableComponent {
       this.trigger(changeTarget, $parent);
     }
     if (checkDataSet(event, 'field')) {
-      checkDataSet(event, 'type') === 'AZ'
-        ? (event.target.dataset.type = 'ZA')
-        : (event.target.dataset.type = 'AZ');
+      checkDataSet(event, 'type') === __sortAZ
+        ? (event.target.dataset.type = __sortZA)
+        : (event.target.dataset.type = __sortAZ);
       this.trigger(newSort, null);
       this.MAINARR.changeSortParameters(
         checkDataSet(event, 'field'),

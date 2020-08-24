@@ -1,3 +1,4 @@
+import { __sortZA, __sortAZ } from '../../core/Data';
 export function createTable(arr, options = {}) {
   const _colCount = 5;
   const _colHeader = ['id', 'firstName', 'lastName', 'email', 'phone'];
@@ -25,9 +26,9 @@ export function createTable(arr, options = {}) {
 }
 function createArrow(type, field, currentField) {
   if (field === currentField) {
-    if (type === 'AZ') {
+    if (type === __sortAZ) {
       return 'vertical_align_bottom';
-    } else if (type === 'ZA') {
+    } else if (type === __sortZA) {
       return 'vertical_align_top';
     }
   } else {

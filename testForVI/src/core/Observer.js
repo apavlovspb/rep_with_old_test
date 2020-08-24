@@ -13,6 +13,7 @@ export class Observer {
   subscribe(eventName, fn) {
     this.listeners[eventName] = this.listeners[eventName] || [];
     this.listeners[eventName].push(fn);
+    console.log(this.listeners);
     return () => {
       this.listeners[eventName] = this.listeners[eventName].filter(
         (listener) => listener !== fn

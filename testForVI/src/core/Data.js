@@ -1,3 +1,6 @@
+export const __sortAZ = 'AZ';
+export const __sortZA = 'ZA';
+
 const gimmeValue = (filter, key) => {
   if (typeof key !== 'object') {
     const result = String(key).toLowerCase().includes(filter.toLowerCase());
@@ -82,9 +85,9 @@ export class DataCenter {
     this.currentPage = page;
   }
   sort() {
-    if (this.sortType === 'AZ') {
+    if (this.sortType === __sortAZ) {
       return sortAZ(this.currentArr, this.sortField);
-    } else if (this.sortType === 'ZA') {
+    } else if (this.sortType === __sortZA) {
       return sortZA(this.currentArr, this.sortField);
     }
   }
