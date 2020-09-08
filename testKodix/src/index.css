@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0
+}
+
+html {
+  font-size: 10px;
+}
+
+
+body {
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  color: #282D30;
+  font-size: 1.4rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  font-size: 4.2rem;
+}
+
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: black;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+@media (max-width:719px) {
+  .wrapper-table-header {
+    display: none;
+  }
+}

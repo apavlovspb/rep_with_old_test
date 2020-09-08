@@ -1,0 +1,33 @@
+.wrapper-table-content {
+
+    background-color: #F5F6F6;
+    border-bottom: 1px solid grey;
+    font-size: 15px;
+    color: #323232;
+    padding-top: 20px;
+    flex-wrap: wrap;
+
+}
+
+
+.wrapper-table-content:last-child {
+    border-bottom: none
+}
+
+.wrapper-table-content-description {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+    color: #8B8B8B;
+    height: 35px;
+}
+
+
+.label-radio {
+    display: block;
+    width: 19px;
+    height: 19px;
+    border-radius: 10px;
+
+    border: 1px solid #8B8B8B;
+}

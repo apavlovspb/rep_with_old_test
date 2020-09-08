@@ -1,0 +1,14 @@
+.header {
+    height: 100px;
+    background-color: #282D30;
+}
+
+.header-picture {
+    display: flex;
+    justify-content: center;
+
+}
+
+.header-pictures {
+    max-width: 100%;
+}
